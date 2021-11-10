@@ -74,6 +74,7 @@
         $ajout = $connexion->prepare($sql);
         $ajout->execute(array(':isbn'=>$isbn, ':titre'=>$titrebd, ':tome'=>$tome, ':auteur'=>$auteur, ':serie'=>$serie));
     }
+    
     function delBd($isbn) {
         $sql = "DELETE FROM bande_dessinee WHERE isbn = :isbn";
         $connexion = Connect_bdtk::getConnexion();
